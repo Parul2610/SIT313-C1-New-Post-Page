@@ -34,6 +34,18 @@ function handlePost(event) {
     return;
   }
 
+  
+const tagList = tags
+  .split(',')
+  .map(tag => tag.trim())
+  .filter(Boolean);
+
+if (tagList.length > 3) {
+  alert("Please enter no more than 3 tags!");
+  return;
+}
+
+
   alert("Your post has been successfully sent!");
 }
 
